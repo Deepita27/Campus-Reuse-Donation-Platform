@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-campus-bg text-campus-text antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom smooth scroll and transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3d9cf;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #176B4D;
+}
+
+/* Card glass / surface effects */
+.campus-card {
+  @apply bg-white rounded-2xl border border-campus-border shadow-card transition-all duration-300;
+}
+
+.campus-card-hover {
+  @apply hover:shadow-cardHover hover:-translate-y-1;
+}
+
+/* Accent badge glow */
+.badge-eco {
+  @apply bg-campus-secondary text-campus-primaryDark font-medium px-2.5 py-1 rounded-full text-xs;
+}
